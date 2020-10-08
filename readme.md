@@ -42,4 +42,3 @@ Note:
     	
 12. Lakukan langkah nomor 10
 13. tambah web server (tomcat) timeout value= 45->190
-14. Jika masih ada kendala instalasi hubungi Kiki 
