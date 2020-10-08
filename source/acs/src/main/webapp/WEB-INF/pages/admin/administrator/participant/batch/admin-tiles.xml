@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions> 
+
+	<definition name="/pages/admin/administrator/participant/batch/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/view_script.jsp" />    
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/edit.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/edit_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/detail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/detail.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/detail_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/inprogress/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/view_script.jsp" />    
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/inprogress/add" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/add.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/add_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/inprogress/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/edit.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/inprogress/edit_script.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/administrator/participant/batch/participant/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/participant/add" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/add.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/add_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/participant/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/edit.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/edit_script.jsp" />
+   </definition>
+   <definition name="/pages/admin/administrator/participant/batch/participant/personalitytest" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/personalitytest.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/participant/personalitytest_script.jsp" />
+   </definition>
+   
+   
+    <definition name="/pages/admin/administrator/participant/batch/report" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/report.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/participant/batch/report_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/participant/batch/reportgroup" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/participant/batch/reportgroup.jsp" />
+       
+   </definition>
+   
+   
+</tiles-definitions>

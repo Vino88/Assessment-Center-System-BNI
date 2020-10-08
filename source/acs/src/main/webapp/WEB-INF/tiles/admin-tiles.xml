@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+   
+    <!-- Admin Definition -->
+   <definition name="admin-definition" template="/WEB-INF/tiles/layouts/adminLayout.jsp">  
+       <put-attribute name="title" value="ACS" />    
+       <put-attribute name="head" value="/WEB-INF/tiles/template/admin_themes/head.jsp" />
+       <put-attribute name="header" value="/WEB-INF/tiles/template/admin_themes/header.jsp" /> 
+       <put-attribute name="body" value="" /> 
+       <put-attribute name="foot" value="/WEB-INF/tiles/template/admin_themes/foot.jsp" /> 
+       <put-attribute name="footscript" value="" />   
+        
+   </definition>  
+   
+   <definition name="admin-login" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/admin-login/view.jsp" />  
+   </definition>
+   <definition name="admin-forgotpassword" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/admin-login/forgotpassword.jsp" />  
+   </definition>
+   <definition name="admin-changepassword" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/auth/changepassword/view.jsp" />  
+   </definition>
+   <definition name="admin-home" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/home/view.jsp" />  
+   </definition>
+   
+   <definition name="administrator/lcb/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/lcb/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/lcb/view_script.jsp" />
+   </definition>
+   <definition name="administrator/lcb/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/lcb/edit.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/lcb/edit_script.jsp" />
+   </definition>
+   
+   
+   <definition name="/pages/admin/administrator/assessement/participant/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participant/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/assessement/participant/view_script.jsp" />    
+   </definition>
+   
+   <definition name="/pages/admin/administrator/assessement/participant/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participant/edit.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/assessement/participant/add" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participant/add.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/administrator/assessement/participant/detail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participant/detail.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/assessement/participant/detail_script.jsp" />
+   </definition>
+   <definition name="/pages/admin/administrator/assessement/participant/detail/lcb" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participant/detailLcb.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/assessement/participant/detailLcb_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/assessement/participantfinish/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participantfinish/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/assessement/participantfinish/view_script.jsp" />
+   </definition>
+   <definition name="/pages/admin/administrator/assessement/participantfinish/detail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/assessement/participantfinish/detail.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/assessement/participantfinish/detail_script.jsp" />
+   </definition>
+   
+   
+      <definition name="/pages/admin/administrator/competency/competencylibrary/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/competency/competencylibrary/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/competency/competencylibrary/view_script.jsp" />    
+   </definition>
+   
+   <definition name="/pages/admin/administrator/competency/competencylibrary/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/competency/competencylibrary/edit.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/competency/competencylibrary/add" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/competency/competencylibrary/add.jsp" />
+   </definition>
+   
+   <definition name="operator-home" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/operator/home/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/operator/home/view_script.jsp" />  
+   </definition>
+   
+   <definition name="operator-home-detail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/operator/home/detail/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/operator/home/detail/view_script.jsp" />  
+   </definition>
+   
+</tiles-definitions>
+
+	

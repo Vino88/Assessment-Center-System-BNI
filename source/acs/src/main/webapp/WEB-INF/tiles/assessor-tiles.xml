@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+
+	<definition name="assessor-home" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/home/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/home/view_script.jsp" />  
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/home/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/home/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/home/view_script.jsp" />  
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/cap/list" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/cap/list.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/cap/list_script.jsp" />
+   </definition>
+ 	<definition name="/pages/admin/assessor/assess/cap/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/cap/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/cap/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/cap/capdetail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/cap/capdetail/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/cap/capdetail/view_script.jsp" />
+   </definition>
+   <definition name="/pages/admin/assessor/assess/cap/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/cap/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/cap/competency/view_script.jsp" />
+   </definition>
+   
+   
+   <definition name="/pages/admin/assessor/assess/simulation/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/simulation/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/simulation/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/simulation/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/simulation/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/simulation/competency/view_script.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/assessor/assess/analysis/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/analysis/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/analysis/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/analysis/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/analysis/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/analysis/competency/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/assess/integrationgrid/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/integrationgrid/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/integrationgrid/view_script.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/assessor/assess/reviewer/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/assess/reviewer/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/assess/reviewer/view_script.jsp" />
+   </definition>
+   
+   
+   
+   
+   
+   <!--  HISTORY -->
+   <definition name="/pages/admin/assessor/participant/history/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/history/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/history/view_script.jsp" />  
+   </definition>
+   
+   
+   
+   <definition name="/pages/admin/assessor/participant/home/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/home/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/home/view_script.jsp" />  
+   </definition>
+   
+   <definition name="/pages/admin/assessor/participant/cap/list" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/cap/list.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/cap/list_script.jsp" />
+   </definition>
+ 	<definition name="/pages/admin/assessor/participant/cap/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/cap/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/cap/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/participant/cap/capdetail" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/cap/capdetail/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/cap/capdetail/view_script.jsp" />
+   </definition>
+   <definition name="/pages/admin/assessor/assess/cap/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/cap/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/cap/competency/view_script.jsp" />
+   </definition>
+   
+   
+   <definition name="/pages/admin/assessor/participant/simulation/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/simulation/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/simulation/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/participant/simulation/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/simulation/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/simulation/competency/view_script.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/assessor/participant/analysis/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/analysis/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/analysis/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/participant/analysis/competency" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/analysis/competency/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/analysis/competency/view_script.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/assessor/participant/integrationgrid/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/integrationgrid/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/integrationgrid/view_script.jsp" />
+   </definition>
+   
+    <definition name="/pages/admin/assessor/participant/reviewer/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/assessor/participant/reviewer/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/assessor/participant/reviewer/view_script.jsp" />
+   </definition>
+   
+</tiles-definitions>
+
+	

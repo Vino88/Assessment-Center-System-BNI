@@ -1,0 +1,106 @@
+<p>Jakarta, ${now}</p>
+
+<p>Kepada Yth,</p> 
+<p>Bapak/Ibu ${participantCredential.fullName}</p>
+<p>Di tempat</p>
+<br/>
+<p>Dengan Hormat,</p>
+
+<p>Dalam rangka pelaksanaan <i>talent management</i> dan pengembangan pegawai, Bapak / Ibu terpilih mengikuti program assessment yang akan diselenggarakan oleh Assessment Center Group - BNI Corporate University.</p> 
+
+<p>Kami telah menjadwalkan Bapak/Ibu untuk mengikuti assessment dengan rincian sbb : </p>
+
+<table>
+ 
+<tr>
+	<td>Sesi 1</td>
+	<td> </td>
+</tr>
+
+<tr>
+	<td>Waktu</td>
+	<td>: ${firstSessionDate} : ${firstSessionTime}</td>
+</tr>
+<tr>
+	<td>Tempat</td>
+	<td>: ${location}</td>
+</tr>
+
+<tr>
+	<td>Sesi 2</td>
+	<td> </td>
+</tr>
+
+<tr>
+	<td>Waktu</td>
+	<td>: ${secondSessionDate} : ${secondSessionTime}</td>
+</tr>
+<tr>
+	<td>Tempat</td>
+	<td>: ${locationSecond}</td>
+</tr>
+
+</table>
+
+<p>
+	*) Pelaksanaan assessment dilakukan secara online melalui jaringan internet di lokasi masing - masing peserta
+</p>
+
+<br/>
+<p>Dikarenakan assessment akan dilakukan secara online, berikut hal-hal yang perlu Bapak/Ibu siapkan, sbb : <br/>
+a.	Menggunakan laptop dengan kamera<br/>
+b.	Headset<br/>
+c.	Jaringan internet dengan kecepatan min 2 MBps (Sangat disarankan Bapak/Ibu menggunakan wifi pribadi)<br/>
+d.	<i>Web browser</i> yang memiliki <i>Flash add on</i>
+</p>
+
+
+<p>Aktivitas - aktivitas yang terjadi selama assessment berlangsung dirancang untuk memberikan informasi yang obyektif dari kemampuan seseorang dibandingkan dengan kriteria / kompetensi yang dibutuhkan untuk sukses sebagai seorang Pimpinan. Hasil assessment ini akan berupa profil kelebihan/kekuatan dan area yang perlu dikembangkan sehubungan dengan kompetensi yang dibutuhkan untuk sukses sebagai Pimpinan.</p> 
+
+<p>Selama assessment berlangsung, Anda diharapkan untuk menganalisa serta menindaklanjuti permasalahan yang terjadi. Simulasi yang terlibat di dalamnya tidak dirancang untuk mengevaluasi kemampuan teknis dalam bidang tersebut, melainkan mengukur kemampuan manajerial dalam hal :<br/>
+a.	Merencanakan dan menyusun rekomendasi<br/>
+b.	Bekerjasama dengan mitra kerja<br/>
+c.	Bekerjasama dengan abwahan<br/>
+d.	Menyusun rencana strategis<br/>
+<br/>
+</p>
+
+<p>Secara keseluruhan ada beberapa aktivitas online yang akan dilakukan selama assessment berlangsung. Aktivitas tersebut adalah :</p>
+
+<p>Sesi 1<br/>
+Pada sesi I ini Anda akan diminta untuk melengkapi data diri, aspirasi karir kedepan, memberikan serangkaian rekam jejak pengalaman selama berkarir di BNI dan mengerjakan soal-soal dari sebuah alat tes inventori<br/>
+<br/>
+1.	Konfirmas Data Diri dan Aspirasi Karir<br/>
+    Dalam aktivitas ini Anda diminta untuk melengkapi data pribadi, termasuk harapan pengembangan karir Anda pada 2 - 3 tahun kedepan. Jawablah sesuai pertanyaan yang sudah disediakan. Periksalah jawaban Anda, jangan sampai ada yang terlewati.<br/>
+<br/>
+2.	Prestasi Karir<br/>
+Anda diminta untuk menjawab pertanyaan seputar rekam jejak atas pengalaman kerja dan prestasi karirnya, yang harus ditulis berbentuk uraian lengkap. Peserta akan dipandu dalam dalam format STAR atau Situational/Task (Situasi/Tugas), Action (Aksi atau tindakan), dan Result (Hasil)<br/>
+<br/>
+3.	Leadership Inventory<br/>
+    Pada aktivitas ini Anda diminta mengerjakan soal-soal dalam suatu inventori atau alat tes yang terdiri dari 70 (tujuh puluh) soal. Peserta harus mengelola waktunya agar bisa menyelesaikan dan melengkapi seluruh soal dalam waktu tertentu<br/>
+<br/>
+Sesi 2<br/>
+Pada sesi II ini Anda akan diminta untuk memberikan usulan tindakan terhadap serangkaian masalah seputar rekan kerja, bawahan, pelanggan, serta melakukan analisa bisnis untuk meningkatkan kinerja sebuah organisasi fiktif<br/>
+<br/>
+1.	Simulasi Pemecahan Masalah<br/>
+     Dalam simulasi ini Anda diminta untuk menyelesaikan dan mengatasi masalah-masalah seputar rekan kerja, pelanggan, dan bawahan yang terjadi dalam suatu organisasi fiktif. Dalam simulasi ini, peserta akan berperan sebagai pimpinan dari suatu wilayah kerja. Peserta diminta menindaklanjuti surat atau email, dengan menjawab pertanyaan-pertanyaan yang menyertai surat atau <i>email</i> tersebut. Selain surat atau <i>email</i>, terdapat video rekaman yang harus diperhatikan oleh peserta untuk dapat menindak lanjuti permasalahan yang ada<br/>
+<br/>
+2.	Simulasi Rencana Bisnis<br/>
+    Dalam simulasi ini Anda diminta untuk menjawab pertanyaan seputar rencana peningkatan bisnis terhadap suatu organisasi fiktif.  Peserta harus menguraikan rencana kerjanya secara lengkap, dan kemudian diminta untuk membuat rekaman video yang  merangkum secara singkat rencana kerja tersebut<br/>
+</p>
+
+
+<p>
+Berikut kami sampaikan link yang dapat Bapak/Ibu gunakan pada pelaksanaan assessment:<br/><a href="https://dlabs.dayalima.com/acs">Assessment</a> <br/>
+Berikut kami sampaikan password yang dapat Bapak/Ibu gunakan pada pelaksanaan assessment : ${participantCredential.password}
+</p>
+<p>
+Jika terdapat hal-hal yang perlu ditanyakan mengenai pelaksanaan asesmen tersebut, Bapak / Ibu dapat menghubungi Assessment Center Group - BNI Corporate University melalui telepon (021) 69837222 ext.9833 dan 9836 atau melalui email assessmenbnv46@bni.co.id.
+</p>
+
+<p>Demikian informasi yang dapat kami sampaikan.</p>
+
+<p> 
+Assessment Center Group <br/>
+BNI Corporate University
+</p>

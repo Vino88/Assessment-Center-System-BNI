@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+ 
+   <!-- LOGIN Definition -->
+   <definition name="login-definition" template="/WEB-INF/tiles/layouts/loginLayout.jsp">  
+       <put-attribute name="title" value="ACS" />    
+       <put-attribute name="body" value="" />   
+   </definition>  
+   
+    <!-- View Definition -->
+   <definition name="view-definition" template="/WEB-INF/tiles/layouts/viewLayout.jsp">  
+       <put-attribute name="title" value="ACS" />    
+       <put-attribute name="head" value="/WEB-INF/tiles/template/themes/head.jsp" />
+       <put-attribute name="header" value="/WEB-INF/tiles/template/themes/header.jsp" /> 
+       <put-attribute name="body" value="" /> 
+       <put-attribute name="foot" value="/WEB-INF/tiles/template/themes/foot.jsp" /> 
+       <put-attribute name="footscript" value="" />   
+   </definition>  
+   
+    <!-- Default Definition -->
+   <definition name="default-definition" template="/WEB-INF/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="ACS" />    
+       <put-attribute name="head" value="/WEB-INF/tiles/template/themes/head.jsp" />
+       <put-attribute name="header" value="" /> 
+       <put-attribute name="body" value="" /> 
+       <put-attribute name="foot" value="/WEB-INF/tiles/template/themes/foot.jsp" /> 
+       <put-attribute name="footscript" value="" />  
+   </definition>
+     
+   
+   <definition name="login" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/login/view.jsp" />  
+   </definition>
+   
+   <definition name="firsthalf" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/login/firsthalf.jsp" />  
+   </definition>
+   
+   <definition name="secondhalf" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/login/secondhalf.jsp" />  
+   </definition>
+   
+   <definition name="vs" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/login/vs.jsp" />  
+   </definition>
+   
+    <definition name="home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/home/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/home/view_script.jsp" />  
+   </definition>
+   <definition name="lcb-home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/lcb/home.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/lcb/home_script.jsp" />
+   </definition>
+   <definition name="lcb-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/lcb/view.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/lcb/view_footscript.jsp" />    
+   </definition>
+   
+   <definition name="cap-home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/cap/home.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/cap/home_script.jsp" />
+   </definition>
+   <definition name="cap-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/cap/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/cap/view_footscript.jsp" />   
+   </definition>
+   <definition name="factsheet-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/factsheet/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/factsheet/view_footscript.jsp" />
+   </definition>
+   
+   <definition name="aspiration-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/aspiration/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/aspiration/view_footscript.jsp" />
+   </definition>
+   
+    <definition name="inbasket-yourrole" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/your_role.jsp" /> 
+       
+   </definition>
+   <definition name="inbasket-background" extends="login-definition">
+   	   
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/background.jsp" />  
+       
+   </definition>
+   <definition name="inbasket-backgroundinfo" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/background_information.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/inbasket/background_information_script.jsp" /> 
+   </definition>
+   
+   <definition name="inbasket-home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/home.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/inbasket/home_script.jsp" /> 
+   </definition>
+   <definition name="inbasket-finish" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/finish.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/inbasket/finish_script.jsp" /> 
+   </definition>
+   <definition name="inbasket-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/inbasket/view_footscript.jsp" />
+   </definition>
+   <definition name="inbasket-view-detail" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/inbasket/view_detail.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/inbasket/view_detail_script.jsp" />  
+   </definition>
+   
+   <definition name="analysys-home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/analysys/home.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/analysys/home_script.jsp" />  
+   </definition>
+   <definition name="analysys-finish" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/analysys/finish.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/analysys/finish_script.jsp" /> 
+   </definition>
+   <definition name="analysys-view" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/analysys/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/analysys/view_footscript.jsp" />
+   </definition>
+   
+   <definition name="analysys-view-detail" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/analysys/view_detail.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/analysys/view_detail_script.jsp" /> 
+   </definition>
+   <definition name="analysys-view-detail-visionspeech" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/analysys/vs/view_detail.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/analysys/vs/view_detail_script.jsp" /> 
+   </definition>
+   
+   
+   <definition name="/view/visionspeech/home" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/visionspeech/home.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/visionspeech/home_script.jsp" />  
+   </definition>
+   <definition name="/view/visionspeech/detail/visionspeech/vs" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/visionspeech/visionspeech.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/visionspeech/visionspeech_script.jsp" /> 
+   </definition>
+   <definition name="vs-play" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/visionspeech/play.jsp" />  
+   </definition>
+    <definition name="/view/visionspeech/finish" extends="view-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/view/visionspeech/finish.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/view/visionspeech/finish_script.jsp" /> 
+   </definition>
+ 
+</tiles-definitions>

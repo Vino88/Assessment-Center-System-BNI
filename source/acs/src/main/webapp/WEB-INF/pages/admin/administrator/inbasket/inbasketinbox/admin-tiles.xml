@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions> 
+
+	<definition name="/pages/admin/administrator/inbasket/inbasketinbox/view" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/inbasket/inbasketinbox/view.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/admin/administrator/inbasket/inbasketinbox/view_script.jsp" />    
+   </definition>
+   
+   <definition name="/pages/admin/administrator/inbasket/inbasketinbox/edit" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/inbasket/inbasketinbox/edit.jsp" />
+   </definition>
+   
+   <definition name="/pages/admin/administrator/inbasket/inbasketinbox/add" extends="admin-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/admin/administrator/inbasket/inbasketinbox/add.jsp" />
+   </definition>
+   
+   
+</tiles-definitions>

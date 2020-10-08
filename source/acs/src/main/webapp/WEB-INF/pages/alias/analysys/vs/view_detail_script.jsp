@@ -1,0 +1,1 @@
+<%@include file="/WEB-INF/pages/alias/analysys/view_detail_script.jsp" %>

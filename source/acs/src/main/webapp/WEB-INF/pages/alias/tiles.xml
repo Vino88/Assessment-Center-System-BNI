@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+ 
+   
+    <!-- View Definition -->
+   <definition name="alias-definition" template="/WEB-INF/tiles/layouts/viewLayout.jsp">  
+       <put-attribute name="title" value="ACS" />    
+       <put-attribute name="head" value="/WEB-INF/tiles/template/themes/head.jsp" />
+       <put-attribute name="header" value="/WEB-INF/tiles/template/alias/header.jsp" /> 
+       <put-attribute name="body" value="" /> 
+       <put-attribute name="foot" value="/WEB-INF/tiles/template/themes/foot.jsp" /> 
+       <put-attribute name="footscript" value="" />   
+   </definition>  
+   
+ 
+   <definition name="/alias/login" extends="login-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/open/auth/alias/view.jsp" />  
+   </definition>
+   
+   
+    <definition name="/alias/home" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/home/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/home/view_script.jsp" />  
+   </definition>
+   
+   
+   <definition name="/alias/lcb/home" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/lcb/home.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/lcb/home_script.jsp" />
+   </definition>
+   <definition name="/alias/lcb/view" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/lcb/view.jsp" /> 
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/lcb/view_footscript.jsp" />    
+   </definition>
+   
+   <definition name="/alias/cap/home" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/cap/home.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/cap/home_script.jsp" />
+   </definition>
+   <definition name="/alias/cap/view" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/cap/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/cap/view_footscript.jsp" />   
+   </definition>
+   <definition name="/alias/factsheet/view" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/factsheet/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/factsheet/view_footscript.jsp" />
+   </definition>
+   
+  
+   <definition name="/alias/inbasket/view" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/inbasket/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/inbasket/view_footscript.jsp" />
+   </definition>
+   <definition name="/alias/inbasket/view/detail" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/inbasket/view_detail.jsp" />
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/inbasket/view_detail_script.jsp" />  
+   </definition>
+   
+  
+   <definition name="/alias/analysys/view" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/analysys/view.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/analysys/view_footscript.jsp" />
+   </definition>
+   
+   <definition name="/alias/analysys/view/detail" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/analysys/view_detail.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/analysys/view_detail_script.jsp" /> 
+   </definition>
+   <definition name="/alias/analysys/view/detail/visionspeech" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/analysys/vs/view_detail.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/analysys/vs/view_detail_script.jsp" /> 
+   </definition>
+   <definition name="/alias/analysys/view/detail/visionspeech/vs" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/analysys/vs/visionspeech.jsp" />  
+       <put-attribute name="footscript" value="/WEB-INF/pages/alias/analysys/vs/visionspeech_script.jsp" /> 
+   </definition>
+   <definition name="/alias/vs/play" extends="alias-definition">    
+       <put-attribute name="body" value="/WEB-INF/pages/alias/analysys/vs/play.jsp" />  
+   </definition>
+ 
+</tiles-definitions>

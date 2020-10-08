@@ -1,0 +1,60 @@
+Kepada Yth, <br/>
+${adminName}
+<br/>
+
+
+<p>BNI Assessment Center System telah mencatat adanya perubahan pada pelaksananaan Assessment Batch [${batchName}], yang akan dilaksanakan pada : </p>
+
+<table style="text-align:center">
+
+<tr>
+	<td>
+	Sesi 1
+	</td>
+
+	<td>
+	
+	</td>
+</tr>
+
+<tr>
+	<td>
+	Waktu
+	</td>
+
+	<td>
+	: [${session1desc}]
+	</td>
+</tr>
+
+
+
+<tr>
+	<td>
+	Sesi 2
+	</td>
+
+	<td>
+	
+	</td>
+</tr>
+
+<tr>
+	<td>
+	Waktu
+	</td>
+
+	<td>
+	: [${session2desc}]
+	</td>
+</tr>
+
+
+</table>
+<br/>
+<p>Mohon masuk ke dalam sistem untuk memeriksa dan melakukan persiapan yang diperlukan. </p> 
+<br/>
+
+<p>Salam,</p> 
+
+<p>BNI Assessment Center System</p>

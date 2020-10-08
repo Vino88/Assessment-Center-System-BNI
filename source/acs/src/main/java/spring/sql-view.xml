@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sqlView" class="java.util.ArrayList">
+	    <constructor-arg>
+	        <list>
+	            <value>
+CREATE OR REPLACE VIEW vw_assessor_task_stat_or_ig AS
+SELECT * FROM 
+(
+
+SELECT id AS adminId, 0 AS numberOfTask FROM UserAdmin 
+WHERE role='ASSESSOR' AND id NOT IN (
+SELECT p.integrationGridAssessor_id
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.integrationGridAssessor_id = u.id
+WHERE p.integrationGridAssessor_id IS NOT NULL AND
+ p.assessIntegrationGridTime IS NULL
+GROUP BY p.integrationGridAssessor_id
+)
+
+UNION
+
+SELECT u.id AS adminId, COUNT(p.integrationGridAssessor_id) AS numberOfTask
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.integrationGridAssessor_id = u.id
+WHERE u.role='ASSESSOR' AND p.integrationGridAssessor_id IS NOT NULL AND
+p.assessIntegrationGridTime IS NULL
+GROUP BY p.integrationGridAssessor_id
+
+) numberofassign ORDER BY adminId ASC         	
+	            </value> 
+	            
+	             <value>
+CREATE OR REPLACE VIEW vw_assessor_task_stat_or_s1 AS
+SELECT * FROM 
+(
+
+SELECT id AS adminId, 0 AS numberOfTask FROM UserAdmin 
+WHERE role='ASSESSOR' AND id NOT IN (
+SELECT p.simulationAssessor_id
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.simulationAssessor_id = u.id
+WHERE p.simulationAssessor_id IS NOT NULL AND
+ p.assessSimulationFinishTime IS NULL
+GROUP BY p.simulationAssessor_id
+)
+
+UNION
+
+SELECT u.id AS adminId, COUNT(p.simulationAssessor_id) AS numberOfTask
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.simulationAssessor_id = u.id
+WHERE u.role='ASSESSOR' AND p.simulationAssessor_id IS NOT NULL AND
+p.assessSimulationFinishTime IS NULL
+GROUP BY p.simulationAssessor_id
+
+) numberofassign ORDER BY adminId ASC	            	
+	            </value> 
+	            
+	             <value>
+CREATE OR REPLACE VIEW vw_assessor_task_stat_or_s2 AS
+SELECT * FROM 
+(
+
+SELECT id AS adminId, 0 AS numberOfTask FROM UserAdmin 
+WHERE role='ASSESSOR' AND id NOT IN (
+SELECT p.analysysAssessor_id
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.analysysAssessor_id = u.id
+WHERE p.analysysAssessor_id IS NOT NULL AND
+ p.assessAnalysisFinishTime IS NULL
+GROUP BY p.analysysAssessor_id
+)
+
+UNION
+
+SELECT u.id AS adminId, COUNT(p.analysysAssessor_id) AS numberOfTask
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.analysysAssessor_id = u.id
+WHERE u.role='ASSESSOR' AND p.analysysAssessor_id IS NOT NULL AND
+p.assessAnalysisFinishTime IS NULL
+GROUP BY p.analysysAssessor_id
+
+) numberofassign ORDER BY adminId ASC          	
+	            </value> 
+	            
+	             <value>
+CREATE OR REPLACE VIEW vw_assessor_task_stat_or_rv AS
+SELECT * FROM 
+(
+
+SELECT id AS adminId, 0 AS numberOfTask FROM UserAdmin 
+WHERE role='ASSESSOR' AND id NOT IN (
+SELECT p.reviewer_id
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.reviewer_id = u.id
+WHERE p.reviewer_id IS NOT NULL AND
+ p.assessReviewerFinishTime IS NULL
+GROUP BY p.reviewer_id
+)
+
+UNION
+
+SELECT u.id AS adminId, COUNT(p.reviewer_id) AS numberOfTask
+FROM UserAdmin u
+LEFT JOIN ParticipantLogPost p
+ON p.reviewer_id = u.id
+WHERE u.role='ASSESSOR' AND p.reviewer_id IS NOT NULL AND
+p.assessReviewerFinishTime IS NULL
+GROUP BY p.reviewer_id
+
+) numberofassign ORDER BY adminId ASC	            	
+	            </value> 
+	            
+	             
+	            
+	            <value>
+CREATE OR REPLACE VIEW vw_assessor_task_stat_summary AS
+SELECT *, numberOfTaskS1 + numberOfTaskS2 + numberOfTaskRv + numberOfTaskIg AS total FROM (
+SELECT ig.adminId
+, s1.numberOfTask AS numberOfTaskS1
+, s2.numberOfTask AS numberOfTaskS2
+, ig.numberOfTask AS numberOfTaskIg
+, rv.numberOfTask AS numberOfTaskRv
+
+FROM vw_assessor_task_stat_or_ig ig
+
+LEFT JOIN vw_assessor_task_stat_or_s1 s1
+ON ig.adminId = s1.adminId
+
+LEFT JOIN vw_assessor_task_stat_or_s2 s2
+ON ig.adminId = s2.adminId
+
+LEFT JOIN vw_assessor_task_stat_or_rv rv
+ON ig.adminId = rv.adminId
+
+) tmp	            	
+	            </value> 
+	            
+	            <value>
+CREATE OR REPLACE VIEW vw_assessor_task_detail AS
+SELECT 
+u.id as assessorId,
+u.fullname as assessorName,
+b.description as batchName,
+p.fullName as participantName,
+
+b.assessementSecondHalfStartTime, b.assessementFirstHalfStartTime, b.assessementFirstHalfEndTime,
+b.assessementFinishTime,
+'CAP' as testTools,
+plp.assessCapFinishTime IS NOT NULL as assessDone
+
+FROM Participant p
+LEFT JOIN ParticipantLogPost plp
+ON p.id = plp.participant_id
+LEFT JOIN Batch b
+ON p.batch_id = b.id
+LEFT JOIN UserAdmin u
+ON plp.capAssessor_id = u.id
+where plp.capAssessor_id is not null
+
+
+UNION
+
+SELECT 
+u.id as assessorId,
+u.fullname as assessorName,
+b.description as batchName,
+p.fullName as participantName,
+
+b.assessementSecondHalfStartTime, b.assessementFirstHalfStartTime, b.assessementFirstHalfEndTime,
+b.assessementFinishTime,
+'SPM' as testTools,
+plp.assessSimulationFinishTime IS NOT NULL as assessDone
+
+FROM Participant p
+LEFT JOIN ParticipantLogPost plp
+ON p.id = plp.participant_id
+LEFT JOIN Batch b
+ON p.batch_id = b.id
+LEFT JOIN UserAdmin u
+ON plp.simulationAssessor_id = u.id
+where plp.simulationAssessor_id is not null
+
+UNION
+
+SELECT 
+u.id as assessorId,
+u.fullname as assessorName,
+b.description as batchName,
+p.fullName as participantName,
+
+b.assessementSecondHalfStartTime, b.assessementFirstHalfStartTime, b.assessementFirstHalfEndTime,
+b.assessementFinishTime,
+'SRB' as testTools,
+plp.assessAnalysisFinishTime IS NOT NULL as assessDone
+
+FROM Participant p
+LEFT JOIN ParticipantLogPost plp
+ON p.id = plp.participant_id
+LEFT JOIN Batch b
+ON p.batch_id = b.id
+LEFT JOIN UserAdmin u
+ON plp.analysysAssessor_id = u.id
+where plp.analysysAssessor_id is not null
+
+UNION
+
+SELECT 
+u.id as assessorId,
+u.fullname as assessorName,
+b.description as batchName,
+p.fullName as participantName,
+
+b.assessementSecondHalfStartTime, b.assessementFirstHalfStartTime, b.assessementFirstHalfEndTime,
+b.assessementFinishTime,
+'REVIEWER' as testTools,
+plp.assessReviewerFinishTime IS NOT NULL as assessDone
+
+FROM Participant p
+LEFT JOIN ParticipantLogPost plp
+ON p.id = plp.participant_id
+LEFT JOIN Batch b
+ON p.batch_id = b.id
+LEFT JOIN UserAdmin u
+ON plp.reviewer_id = u.id
+where plp.reviewer_id is not null
+	            </value>
+	                   
+	        </list>
+	    </constructor-arg>
+	</bean>
+	
+</beans>
